@@ -1,0 +1,346 @@
+@import url('https://bit.ly/3CZa0Sz');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+/* 1. Global Styles & Typography */
+:root {
+    --primary-dark: #1a1a1a;
+    --accent-gray: #f8f9fa;
+    --text-muted: #6c757d;
+    --ls-spacing: 0.15em;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'line_seed_sans_th', 'Inter', sans-serif;
+    color: var(--primary-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Navigation Styling */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--primary-dark) !important;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-dark);
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 3. Image Effects */
+.img-frame {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 12px;
+    display: inline-block;
+    transition: var(--transition-smooth);
+}
+
+.img-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.gray-filter {
+    filter: grayscale(100%);
+    transition: var(--transition-smooth);
+}
+
+.gray-filter:hover {
+    filter: grayscale(0%);
+}
+
+/* 4. Progress Bars & Badges */
+.progress {
+    background-color: #eee;
+    overflow: visible;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    position: relative;
+    overflow: visible;
+}
+
+/* 5. Spacing & Utilities */
+.ls-2 {
+    letter-spacing: var(--ls-spacing);
+}
+
+.tracking-tighter {
+    letter-spacing: -0.05em;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+/* 6. Section Specifics */
+.hero-section {
+    min-height: 80vh;
+    padding-top: 100px;
+}
+
+.photo-card {
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sidebar Icon Boxes */
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Profile Sidebar Styling */
+.profile-sidebar {
+    transition: var(--transition-smooth);
+}
+
+/* Skill Cards */
+.skill-card {
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.skill-card:hover {
+    border-color: #000 !important;
+    background-color: #fafafa;
+}
+
+/* Custom Progress Bar */
+.progress-bar {
+    transition: width 1.5s ease-in-out;
+}
+
+/* Badges */
+.badge {
+    font-weight: 400;
+    padding: 8px 12px;
+}
+
+/* Mentor Card Styling */
+.mentor-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #eee !important;
+}
+
+.mentor-card:hover {
+    transform: translateY(-5px);
+    border-color: #000 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mentor-card img {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mentor-card:hover img {
+    filter: grayscale(0%);
+    border-color: #000;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Sidebar Icon Styling */
+/* Sidebar Icon Boxes */
+.icon-box {
+    width: 32px;
+    height: 32px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #495057;
+}
+
+/* Contact Bar Button Styling */
+.contact-bar .btn-light {
+    background-color: #f8f9fa;
+    color: #495057;
+    transition: all 0.3s ease;
+    border: 1px solid transparent !important;
+}
+
+.contact-bar .btn-light:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Letter spacing for headings */
+.ls-2 {
+    letter-spacing: 0.1rem;
+}
+
+/* Gray filter for mentor images */
+.gray-filter {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.gray-filter:hover {
+    filter: grayscale(0%);
+}
+
+/* Interest Section Redesign */
+.interest-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    border-color: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.badge-status {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tiny-text {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* Wide Hardware Card Specifics */
+.hardware-card {
+    background: #1a1a1a !important;
+    color: white !important;
+    border: none;
+}
+
+.hardware-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-tag {
+    font-size: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 100px;
+}
+
+/* Animated Scanner Effect */
+.scanner-line {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent);
+    animation: scan 3s infinite linear;
+}
+
+@keyframes scan {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Hover Glow Effect */
+.interest-card:hover .bi {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make it responsive */
+@media (max-width: 991px) {
+    .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 2rem;
+    }
+}
+
+/* 7. Footer & Socials */
+footer a {
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+    color: #000 !important;
+}
+
+/* 8. Responsiveness */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        min-height: 60vh;
+    }
+}
